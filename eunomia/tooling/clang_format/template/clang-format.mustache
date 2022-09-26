@@ -68,14 +68,14 @@ ExperimentalAutoDetectBinPacking: false
 FixNamespaceComments: true
 ForEachMacros:
 {{#foreach_macros}}
-    - {{.}} 
+    - {{.}}
 {{/foreach_macros}}
 IfMacros:
 {{#if_macros}}
-    - {{.}} 
+    - {{.}}
 {{/if_macros}}
 IncludeBlocks: Regroup
-IncludeCategories: 
+IncludeCategories:
     - Regex: '^"(llvm|llvm-c|clang|clang-c)/'
       Priority: 2
       SortPriority: 2
@@ -128,26 +128,26 @@ QualifierOrder: ['inline', 'static', 'constexpr', 'type', 'const', 'volatile']
 RawStringFormats:
     - Language: TextProto
       Delimiters:
-        - pb
-        - PB
-        - proto
-        - PROTO
+          - pb
+          - PB
+          - proto
+          - PROTO
       EnclosingFunctions:
-        - EqualsProto
-        - EquivToProto
-        - PARSE_PARTIAL_TEXT_PROTO
-        - PARSE_TEST_PROTO
-        - PARSE_TEXT_PROTO
-        - ParseTextOrDie
-        - ParseTextProtoOrDie
+          - EqualsProto
+          - EquivToProto
+          - PARSE_PARTIAL_TEXT_PROTO
+          - PARSE_TEST_PROTO
+          - PARSE_TEXT_PROTO
+          - ParseTextOrDie
+          - ParseTextProtoOrDie
       CanonicalDelimiter: ''
-      BasedOnStyle: google    
+      BasedOnStyle: google
     - Language: JavaScript
       Delimiters:
-        - 'json'
-        - 'js'
+          - 'json'
+          - 'js'
       EnclosingFunctions:
-        - 'json'
+          - 'json'
       BasedOnStyle: google
 ReferenceAlignment: Left
 ReflowComments: false
@@ -198,6 +198,6 @@ TypenameMacros:
 {{#typename_macros}}
     - {{.}}
 {{/typename_macros}}
-UseCRLF: {{use_crlf}}
+UseCRLF: false
 UseTab: Never
 WhitespaceSensitiveMacros: [{{#whitespace_sensitive_macros}}{{.}}, {{/whitespace_sensitive_macros}}]
