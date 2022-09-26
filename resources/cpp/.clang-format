@@ -1,0 +1,193 @@
+---
+Language: Cpp
+# BasedOnStyle:  WebKit
+AccessModifierOffset: -4
+
+# Alignments configuration
+AlignAfterOpenBracket: Align
+AlignArrayOfStructures: Left
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: false
+AlignConsecutiveMacros: Consecutive
+AlignEscapedNewlinesLeft: Right
+AlignOperands: AlignAfterOperator
+AlignTrailingComments: true
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortEnumsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: true
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+AlwaysBreakTemplateDeclarations: MultiLine
+AttributeMacros: [{{#attributes_macros}} {{.}} {{/attributes_macros}}]
+BinPackArguments: true
+BinPackParameters: true
+BitFieldColonSpacing: Both
+BraceWrapping:
+    AfterCaseLabel: false
+    AfterClass: false
+    AfterControlStatement: Never
+    AfterEnum: false
+    AfterFunction: false
+    AfterNamespace: false
+    AfterStruct: false
+    AfterUnion: false
+    AfterExternBlock: false
+    BeforeCatch: false
+    BeforeElse: false
+    BeforeLambdaBody: false
+    BeforeWhile: false
+    IndentBraces: false
+    SplitEmptyFunction: false
+    SplitEmptyRecord: false
+    SplitEmptyNamespace: false
+BreakArrays: false
+BreakBeforeBinaryOperators: None
+BreakBeforeBraces: Attach
+BreakBeforeConceptDeclarations: Always
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: AfterColon
+BreakInheritanceList: AfterColon
+BreakStringLiterals: true
+ColumnLimit: 120
+CommentPragmas: '{{comment_pragma}}'
+CompactNamespaces: true
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 4
+Cpp11BracedListStyle: true
+DeriveLineEnding: false
+DerivePointerAlignment: false
+DisableFormat: {{disable_format}}
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: LogicalBlock
+ExperimentalAutoDetectBinPacking: false
+FixNamespaceComments: true
+ForEachMacros: [{{#foreach_macros}} {{.}} {{/foreach_macros}}]
+IfMacros: [{{#if_macros}} {{.}} {{/if_macros}}]
+IncludeBlocks: Regroup
+IncludeCategories: 
+  - Regex:           '^"(llvm|llvm-c|clang|clang-c)/'
+    Priority:        2
+    SortPriority:    2
+    CaseSensitive:   true
+  - Regex:           '^((<|")(gtest|gmock|isl|json)/)'
+    Priority:        3
+  - Regex:           '<[[:alnum:].]+>'
+    Priority:        4
+  - Regex:           '.*'
+    Priority:        1
+    SortPriority:    0
+IncludeIsMainRegex: '(_test)?$'
+IncludeIsMainSourceRegex: ''
+
+IndentAccessModifiers: false
+IndentCaseBlocks: false
+IndentCaseLabels: true
+IndentExternBlock: Indent
+IndentGotoLabels: true
+IndentPPDirectives: AfterHash
+IndentRequiresClause: false
+IndentWidth: 4
+IndentWrappedFunctionNames: true
+InsertBraces: true
+InsertTrailingCommas: None
+KeepEmptyLinesAtTheStartOfBlocks: false
+LambdaBodyIndentation: Signature
+Language: cpp
+MacroBlockBegin: '{{macro_block_begin}}'
+MacroBlockEnd: '{{macro_block_end}}'
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: All
+NamespaceMacros: [{{#namespace_macros}} {{.}} {{/namespace_macros}}]
+PPIndentWidth: 4
+PackConstructorInitializers: CurrentLine
+PenaltyBreakAssignment: 15
+PenaltyBreakBeforeFirstCallParameter: 19
+PenaltyBreakComment: 300
+PenaltyBreakFirstLessLess: 120
+PenaltyBreakString: 1000
+PenaltyBreakTemplateDeclaration: 1000
+PenaltyExcessCharacter: 1000000
+PenaltyIndentedWhitespace: 100
+PenaltyReturnTypeOnItsOwnLine: 60
+PointerAlignment: Left
+QualifierAlignment: Custom
+QualifierOrder: ['inline', 'static', 'constexpr', 'type', 'const', 'volatile' ]
+RawStringFormats:
+    - Language: TextProto
+        Delimiters:
+            - pb
+            - PB
+            - proto
+            - PROTO
+        EnclosingFunctions:
+            - EqualsProto
+            - EquivToProto
+            - PARSE_PARTIAL_TEXT_PROTO
+            - PARSE_TEST_PROTO
+            - PARSE_TEXT_PROTO
+            - ParseTextOrDie
+            - ParseTextProtoOrDie
+    CanonicalDelimiter: ''
+    BasedOnStyle:    google
+    - Language: JavaScript
+        Delimiters:
+            - 'json'
+            - 'js'
+        EnclosingFunctions:
+            - 'json'
+        BasedOnStyle: google
+ReferenceAlignment: Left
+ReflowComments: false
+RequiresClausePosition: OwnLine
+SeparateDefinitionBlocks: Always
+ShortNamespaceLines: 1
+SortIncludes: CaseSensitive
+SortUsingDeclarations: false
+SpaceAfterCStyleCast: true
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: true
+SpaceAroundPointerQualifiers: Default
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParensOptions:
+    AfterControlStatements: true
+    AfterForeachMacros: true
+    AfterFunctionDeclarationName: false
+    AfterFunctionDefinitionName: false
+    AfterIfMacros: true
+    AfterOverloadedOperator: false
+    AfterRequiresInClause: true
+    BeforeNonEmptyParentheses: false
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: true
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: false
+SpacesInContainerLiterals: false
+SpacesInLineCommentPrefix:
+    Minimum: 0
+    Maximum: -1
+SpacesInParentheses: false
+Standard: {{cpp_standard}}
+StatementAttributeLikeMacros: [{{#statement_attribute_like_macros}} {{.}} {{/statement_attribute_like_macros}}]
+StatementMacros: [{{#statement_macros}} {{.}} {{/statement_macros}}]
+TabWidth: 4
+TypenameMacros: [{{#typename_macros}} {{.}} {{/typename_macros}}]
+UseCRLF: {{use_crlf}}
+UseTab: Never
+WhitespaceSensitiveMacros: [{{#whitespace_sensitive_macros}} {{.}} {{/whitespace_sensitive_macros}}]
+---
+
