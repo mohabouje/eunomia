@@ -14,7 +14,7 @@ class AbstractTool(ABC):
         return self._type
 
     @abstractmethod
-    def setup(self, configuration: Dict[str, Any], path: str) -> None:
+    def setup(self, configuration: Dict[str, Any], destination: str) -> None:
         pass
 
 
