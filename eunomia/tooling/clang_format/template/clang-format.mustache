@@ -20,7 +20,10 @@ AllowShortLoopsOnASingleLine: true
 AlwaysBreakAfterReturnType: None
 AlwaysBreakBeforeMultilineStrings: false
 AlwaysBreakTemplateDeclarations: MultiLine
-AttributeMacros: [{{#attributes_macros}} {{.}}, {{/attributes_macros}}]
+AttributeMacros:
+{{#attributes_macros}}
+    - {{.}}
+{{/attributes_macros}}
 BinPackArguments: true
 BinPackParameters: true
 BitFieldColonSpacing: Both
@@ -63,21 +66,27 @@ EmptyLineAfterAccessModifier: Never
 EmptyLineBeforeAccessModifier: LogicalBlock
 ExperimentalAutoDetectBinPacking: false
 FixNamespaceComments: true
-ForEachMacros: [{{#foreach_macros}} {{.}}, {{/foreach_macros}}]
-IfMacros: [{{#if_macros}} {{.}}, {{/if_macros}}]
+ForEachMacros:
+{{#foreach_macros}}
+    - {{.}} 
+{{/foreach_macros}}
+IfMacros:
+{{#if_macros}}
+    - {{.}} 
+{{/if_macros}}
 IncludeBlocks: Regroup
 IncludeCategories: 
-    - Regex:           '^"(llvm|llvm-c|clang|clang-c)/'
-      Priority:        2
-      SortPriority:    2
-      CaseSensitive:   true
-    - Regex:           '^((<|")(gtest|gmock|isl|json)/)'
-      Priority:        3
-    - Regex:           '<[[:alnum:].]+>'
-      Priority:        4
-    - Regex:           '.*'
-      Priority:        1
-      SortPriority:    0
+    - Regex: '^"(llvm|llvm-c|clang|clang-c)/'
+      Priority: 2
+      SortPriority: 2
+      CaseSensitive: true
+    - Regex: '^((<|")(gtest|gmock|isl|json)/)'
+      Priority: 3
+    - Regex: '<[[:alnum:].]+>'
+      Priority: 4
+    - Regex: '.*'
+      Priority: 1
+      SortPriority: 0
 IncludeIsMainRegex: '(_test)?$'
 IncludeIsMainSourceRegex: ''
 IndentAccessModifiers: false
@@ -98,7 +107,10 @@ MacroBlockBegin: '{{macro_block_begin}}'
 MacroBlockEnd: '{{macro_block_end}}'
 MaxEmptyLinesToKeep: 1
 NamespaceIndentation: All
-NamespaceMacros: [{{#namespace_macros}} {{.}}, {{/namespace_macros}}]
+NamespaceMacros:
+{{#namespace_macros}}
+    - {{.}}
+{{/namespace_macros}}
 PPIndentWidth: 4
 PackConstructorInitializers: CurrentLine
 PenaltyBreakAssignment: 15
@@ -112,7 +124,7 @@ PenaltyIndentedWhitespace: 100
 PenaltyReturnTypeOnItsOwnLine: 60
 PointerAlignment: Left
 QualifierAlignment: Custom
-QualifierOrder: ['inline', 'static', 'constexpr', 'type', 'const', 'volatile' ]
+QualifierOrder: ['inline', 'static', 'constexpr', 'type', 'const', 'volatile']
 RawStringFormats:
     - Language: TextProto
       Delimiters:
@@ -176,11 +188,16 @@ SpacesInLineCommentPrefix:
     Maximum: -1
 SpacesInParentheses: false
 Standard: {{cpp_standard}}
-StatementAttributeLikeMacros: [{{#statement_attribute_like_macros}} {{.}}, {{/statement_attribute_like_macros}}]
-StatementMacros: [{{#statement_macros}} {{.}}, {{/statement_macros}}]
+StatementAttributeLikeMacros: [{{#statement_attribute_like_macros}}{{.}}, {{/statement_attribute_like_macros}}]
+StatementMacros:
+{{#statement_macros}}
+    - {{.}}
+{{/statement_macros}}
 TabWidth: 4
-TypenameMacros: [{{#typename_macros}} {{.}}, {{/typename_macros}}]
+TypenameMacros:
+{{#typename_macros}}
+    - {{.}}
+{{/typename_macros}}
 UseCRLF: {{use_crlf}}
 UseTab: Never
-WhitespaceSensitiveMacros: [{{#whitespace_sensitive_macros}} {{.}}, {{/whitespace_sensitive_macros}}]
-
+WhitespaceSensitiveMacros: [{{#whitespace_sensitive_macros}}{{.}}, {{/whitespace_sensitive_macros}}]

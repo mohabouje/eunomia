@@ -2,7 +2,7 @@ from enum import Enum
 from stringcase import pascalcase
 
 
-class ToolType(Enum):
+class Type(Enum):
     Linter = 0
     Formatter = 1
     Compiler = 2
@@ -23,8 +23,8 @@ class ToolType(Enum):
         return str(self)
 
     @staticmethod
-    def argparse(s: str) -> 'ToolType':
+    def argparse(s: str) -> 'Type':
         try:
-            return ToolType[pascalcase(s)]
+            return Type[pascalcase(s)]
         except KeyError:
-            raise ValueError(f"Invalid tool: {s}")
+            raise ValueError(f"Invalid tool-type: {s}")
