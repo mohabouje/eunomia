@@ -16,6 +16,6 @@ class ClangFormat(AbstractFormatter):
                                                      type=self.type)
         for resource in resources:
             logger.debug(f'Exporting {resource.path} to {path}')
-            result: str = resource.serialize(configuration=configuration)
+            result: str = resource.serialize(configuration=configuration['clang-format'])
             with open(f'{path}/.clang-format', 'w') as file:
                 file.write(result)

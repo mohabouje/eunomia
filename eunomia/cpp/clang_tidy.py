@@ -16,6 +16,6 @@ class ClangTidy(AbstractLinter):
                                                      type=self.type)
         for resource in resources:
             logger.debug(f'Exporting {resource.path} to {path}')
-            result: str = resource.serialize(configuration=configuration)
+            result: str = resource.serialize(configuration=configuration['clang-tidy'])
             with open(f'{path}/.clang-tidy', 'w') as file:
                 file.write(result)
