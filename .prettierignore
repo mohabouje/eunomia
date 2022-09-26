@@ -1,2 +1,2 @@
-resources/cpp/.clang-format
-resources/cpp/.clang-tidy
+resources/cpp/clang-format.yaml
+resources/cpp/clang-tidy.yaml
