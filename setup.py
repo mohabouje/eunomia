@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+with open('requirements.txt') as f:
+    required = f.read().splitlines()
+
 if __name__ == "__main__":
 
     setup(
@@ -10,12 +13,16 @@ if __name__ == "__main__":
         license='MIT',
         license_files='LICENSE',
         url='https://github.com/mohabouje/eunomia',
-        packages=['eunomia'],
-        packages=find_packages(where="../"),
-        package_dir={"": "../"},
+        version='0.0.1.beta',
+        packages=find_packages(),
+        entry_points={
+            'console_scripts': [
+                'eunomia = eunomia.__main__:main'
+            ],
+        },
         include_package_data=True,
         zip_safe=False,
-        install_requires=[],
+        install_reqs=required,
         python_requires='>=3.6',
         classifiers=[
             'Development Status :: 3 - Alpha',

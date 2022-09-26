@@ -10,12 +10,12 @@ class ClangFormat(AbstractFormatter):
     def __init__(self) -> None:
         super().__init__(Language.Cpp)
 
-    def setup(self, configuration: Dict[str, Any], path: str) -> None:
+    def setup(self, configuration: Dict[str, Any], destination: str) -> None:
         logger.info('Exporting a configuration for clang-format')
         resources: ToolResources = collect_resources(language=self.language,
                                                      type=self.type)
         for resource in resources:
-            logger.debug(f'Exporting {resource.path} to {path}')
+            logger.debug(f'Exporting {resource.path} to {destination}')
             result: str = resource.serialize(configuration=configuration['clang-format'])
-            with open(f'{path}/.clang-format', 'w') as file:
+            with open(f'{destination}/.clang-format', 'w') as file:
                 file.write(result)
