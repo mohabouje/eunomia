@@ -1,4 +1,5 @@
 import os
+import requests
 from typing import Any, Dict
 from eunomia import logger
 from eunomia.tooling.tool import AbstractTool
@@ -16,4 +17,10 @@ class GitIgnore(AbstractTool):
         super().__init__(type=Type.Linter)
 
     def setup(self, configuration: Dict[str, Any], destination: str) -> None:
-        logger.info('Exporting a configuration for gitlint in {file}')
+        file = os.path.join(destination, self._default_filename)
+        logger.info(f'Exporting a configuration for gitignore in {file}')
+        with open(file, 'w') as file:
+            languages = ','.join(configuration['languages'])
+            data = requests.get(f'https://gitignore.io/api/{languages}').text
+            data = data + '\n'.join(configuration['workspace'])
+            file.write(data)

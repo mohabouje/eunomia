@@ -13,10 +13,13 @@ line-length=80
 min-length=10
 
 [title-must-not-contain-word]
-words=foo,bar,baz
+words=
 
 [title-match-regex]
 regex=^EIN-\d+(\s\[(wip|dev|test|doc|fix|feat|style|refact|error)\])?\s[A-Z].*$
+
+[ignore-by-title]
+regex=^Release(.*)
 
 [body-max-line-length]
 line-length=512
@@ -25,6 +28,3 @@ min-length=10
 
 [author-valid-email]
 regex=[^@]+@gmail.com
-
-[ignore-by-title]
-regex=^Release(.*)
