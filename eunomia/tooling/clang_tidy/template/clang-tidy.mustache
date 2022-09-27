@@ -1,4 +1,7 @@
-Checks: '{{checks}}'
+Checks:
+{{#checks}}
+    - {{.}}
+{{/checks}}
 InheritParentConfig: true
 AnalyzeTemporaryDtors: false
 WarningsAsErrors: '-*'
